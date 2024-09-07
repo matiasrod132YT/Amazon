@@ -1,3 +1,6 @@
+import { auth, db } from './auth.js';
+import { doc, setDoc } from "https://www.gstatic.com/firebasejs/9.x.x/firebase-firestore.js";
+
 const provider = new firebase.auth.GoogleAuthProvider();
 
 // Validate Functions

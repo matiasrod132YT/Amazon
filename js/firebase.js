@@ -1,4 +1,6 @@
-// firebaseConfig.js
+// firebase.js
+
+// Firebase Configuration
 const firebaseConfig = {
     apiKey: "AIzaSyCUJAubROmqsfzEYiIpMnhhEBfFwi0oLKY",
     authDomain: "fir-35ee7.firebaseapp.com",
@@ -8,7 +10,12 @@ const firebaseConfig = {
     appId: "1:612357174687:web:8e8050d0c4c7cbeef7f9aa",
     measurementId: "G-BNGML4WZ75"
 };
-// Inicializar Firebase
+
+// Initialize Firebase
 firebase.initializeApp(firebaseConfig);
+
+// Export Firebase Auth and Firestore
 const auth = firebase.auth();
-const database = firebase.database();
+const db = firebase.firestore();
+
+export { auth, db };

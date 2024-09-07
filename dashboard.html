@@ -3,42 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Amazon Dashboard</title>
+    <title>Dashboard - E-Commerce</title>
     <link rel="stylesheet" href="styles/dashboard.css">
 </head>
 <body>
-
-    <!-- Encabezado -->
     <header>
-        <div class="logo">
-            <img src="img/logo.png" alt="Amazon Logo">
-        </div>
-        <div class="search-bar">
-            <input type="text" placeholder="Buscar productos...">
-        </div>
-        <div class="header-icons">
-            <span class="icon">🔔</span>
-            <span class="icon">🛒</span>
-            <span class="icon">👤</span>
-        </div>
+        <nav>
+            <h1>MyEcommerce</h1>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#" id="adminSection" style="display:none;">Admin</a></li>
+                <li><a href="#" id="signOutButton">Sign Out</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <!-- Contenido principal -->
     <main>
-        <h1>Bienvenido al Dashboard de Amazon</h1>
+        <section class="product-list">
+            <h2>Products</h2>
+            <div id="products">
+                <!-- Products will be dynamically added here -->
+            </div>
+        </section>
 
-        <div class="dashboard-grid">
-            <div class="card">
-                <h2>Pedidos recientes</h2>
-                <p>No tienes pedidos recientes</p>
+        <aside class="admin-section" id="adminSectionContainer" style="display:none;">
+            <h2>Admin Section</h2>
+            <form id="addProductForm">
+                <h3>Add Product</h3>
+                <label for="productName">Product Name:</label>
+                <input type="text" id="productName" required>
+                
+                <label for="productPrice">Price:</label>
+                <input type="number" id="productPrice" step="0.01" required>
+                
+                <label for="productImage">Image URL:</label>
+                <input type="text" id="productImage" required>
+                
+                <button type="submit">Add Product</button>
+            </form>
+        </aside>
+
+        <aside class="cart">
+            <h2>Shopping Cart</h2>
+            <div id="cart">
+                <!-- Cart items will be dynamically added here -->
             </div>
-            <div class="card">
-                <h2>Recomendaciones</h2>
-                <p>Explora productos basados en tu historial</p>
-            </div>
-        </div>
+            <button id="checkoutButton">Checkout</button>
+        </aside>
     </main>
-
-    <script src="js/dashboard.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+    <script type="module" src="js/firebase.js"></script>
+    <script type="module" src="js/auth.js"></script>
+    <script type="module" src="js/dashboard.js" defer></script>
 </body>
 </html>
