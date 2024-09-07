@@ -17,12 +17,26 @@
     </header>
 
     <main>
+        <div id="admin-section" style="display: none;">
+            <h2>Añadir Producto</h2>
+            <form id="add-product-form">
+                <input type="text" id="product-name" placeholder="Nombre del Producto" required />
+                <input type="text" id="product-description" placeholder="Descripción" required />
+                <input type="number" id="product-price" placeholder="Precio" required />
+                <button type="submit">Añadir Producto</button>
+            </form>
+        </div>
+        
+        <div id="products-list">
+            <h2>Lista de Productos</h2>
+            <ul id="product-items"></ul>
+        </div>
     </main>
     <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
-    <script type="module" src="js/firebase.js"></script>
-    <script type="module" src="js/auth.js"></script>
-    <script type="module" src="js/dashboard.js" defer></script>
+    <script src="js/firebase.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/dashboard.js"></script>
 </body>
 </html>
