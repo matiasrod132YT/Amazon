@@ -3,54 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard - E-Commerce</title>
+    <title>Dashboard - Amazon</title>
     <link rel="stylesheet" href="styles/dashboard.css">
 </head>
 <body>
     <header>
         <nav>
-            <h1>MyEcommerce</h1>
+            <h1>Amazon</h1>
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Products</a></li>
-                <li><a href="#" id="adminSection" style="display:none;">Admin</a></li>
                 <li><a href="#" id="signOutButton">Sign Out</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section class="product-list">
-            <h2>Products</h2>
-            <div id="products">
-                <!-- Products will be dynamically added here -->
-            </div>
-        </section>
-
-        <aside class="admin-section" id="adminSectionContainer" style="display:none;">
-            <h2>Admin Section</h2>
-            <form id="addProductForm">
-                <h3>Add Product</h3>
-                <label for="productName">Product Name:</label>
-                <input type="text" id="productName" required>
-                
-                <label for="productPrice">Price:</label>
-                <input type="number" id="productPrice" step="0.01" required>
-                
-                <label for="productImage">Image URL:</label>
-                <input type="text" id="productImage" required>
-                
-                <button type="submit">Add Product</button>
-            </form>
-        </aside>
-
-        <aside class="cart">
-            <h2>Shopping Cart</h2>
-            <div id="cart">
-                <!-- Cart items will be dynamically added here -->
-            </div>
-            <button id="checkoutButton">Checkout</button>
-        </aside>
     </main>
     <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
